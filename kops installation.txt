@@ -3,8 +3,9 @@ Landmark Technologies
 Tel: +1 437 215 2483 
 mylandmarktech@gailcom 
 www.mylandmarktech.com 
-kops
+
 Setup Kubernetes (K8s) Cluster on AWS Using KOPS
+kops
 
 #!/bin/bash
 #1) Create Ubuntu EC2 instance
@@ -32,7 +33,7 @@ Setup Kubernetes (K8s) Cluster on AWS Using KOPS
  sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
  sudo chmod +x ./kubectl
  sudo mv ./kubectl /usr/local/bin/kubectl
- aws s3 mb s3://nubonglegah.k8.local
+ aws s3 mb s3://nubonglegah.k8s.local
  aws s3 ls
 
 5) Create an IAM role from Consloe or CLI with below Policies.
@@ -50,7 +51,7 @@ You Created. --> Save.
 
 6) create an S3 bucket Execute below commond in KOPS Server use unique bucket name if you get bucket name exists error.
 
-	aws s3 mb s3://nubonglegah.k8.local
+	aws s3 mb s3://nubonglegah.k8s.local
 	aws s3 ls
 	
     ex:
@@ -63,8 +64,8 @@ You Created. --> Save.
     vi .bashrc
 	
 	# Give Unique Name And S3 Bucket which you created.
-	export NAME=s3://legah2045.k8.local
-	export KOPS_STATE_STORE=s3://legah2045.k8.local
+	export NAME=s3://legah2045.k8s.local
+	export KOPS_STATE_STORE=s3://legah2045.k8s.local
  
     source .bashrc
 	
