@@ -18,7 +18,7 @@ kops
  sudo apt install unzip python -y
  sudo unzip awscli-bundle.zip
  sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
- 
+ sudo apt  install awscli -y
  
 #3) Install kops on ubuntu instance:
 
@@ -27,6 +27,7 @@ kops
  	sudo wget https://github.com/kubernetes/kops/releases/download/v1.16.1/kops-linux-amd64
  	sudo chmod +x kops-linux-amd64
  	sudo mv kops-linux-amd64 /usr/local/bin/kops
+	
  
 #4) Install kubectl
 
