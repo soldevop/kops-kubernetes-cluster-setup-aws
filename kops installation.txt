@@ -101,12 +101,18 @@ To Delete Cluster
 
    kops delete cluster --name=${NAME} --state=${KOPS_STATE_STORE} --yes  
    
+   
+   12) Modifying the number of nodes
+   - In our case the worker node group is called "nodes" so to change their number, we will do
+   kops edit ig nodes     
+   - After editing the file, we need to update it by doing
+   kops update cluster ${NAME} --yes
 ====================================================================================================
 
 
 IF you wan to SSH to Kubernates Master or Nodes Created by KOPS. You can SSH From KOPS_Server
 
-ssh  admin@<IPOrDNS>
+ssh  admin@<IP or DNS>
 it above command  is not working
 then execute
 ssh -i ~/.ssh/id_rsa admin@<IPOrDNS>
